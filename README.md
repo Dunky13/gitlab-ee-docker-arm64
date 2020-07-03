@@ -2,6 +2,8 @@
 
 If you just want to install Gitlab Arm 64, you can use my prebuild package at [here](https://gitlab.com/gypsophlia/gitlab-build-arm64/-/tree/master/release), and skip to *Deploy the package in Docker* section
 
+or pre-build docker image for arm64 devices by running: `docker pull registry.gitlab.com/gypsophlia/omnibus-gitlab/gitlab-ce:13.1.2-ce.0_arm64`
+
 ## Setp 1: Setup AWS ARM64 instance
 If you don't like coress compile, you can request a `a1.4xlarge`
  spot instance on AWS, please remember to increace the storage space when requesting. I set it to 30GB
