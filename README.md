@@ -77,7 +77,8 @@ Note: `COMPILE_ASSETS=true` is set to be true, I was haveing some error when not
 2. Change `FROM ubuntu:16.04` to `FROM ubuntu:20.04` in `omnibus-gitlab/docker/Dockerfile`
 3. Copy the build result(.deb package) to `omnibus-gitlab/docker/assets`
 4. Comment out/delete all content in `omnibus-gitlab/docker/assets/download-package` and add `cp /assets/gitlab-ce_13.1.2-ce.0_arm64.deb /tmp/gitlab.deb`. (`gitlab-ce_13.1.2-ce.0_arm64.deb` is the build result from Step 3)
-5. run `sudo docker build -f ./Dockerfile -t gitlab-ce .` in `omnibus-gitlab/docker/`folder to build the package
+5. create an empty RELEASE file `touch omnibus-gitlab/docker/RELEASE`
+6. run `sudo docker build -f ./Dockerfile -t gitlab-ce .` in `omnibus-gitlab/docker/`folder to build the package
 
 This has been tested on [Odroid C4](https://www.hardkernel.com/shop/odroid-c4/), but it should work on other Arm64 platforms. 
 
