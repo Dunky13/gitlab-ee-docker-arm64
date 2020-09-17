@@ -13,4 +13,4 @@ echo "RELEASE_PACKAGE=gitlab-ce" > ./docker/RELEASE
 echo "RELEASE_VERSION=$VERSION-ce.0" >> ./docker/RELEASE
 echo "DOWNLOAD_URL=$BASE_URL/gitlab-ce_$VERSION-ce.0_arm64.deb" >> ./docker/RELEASE
 
-sudo docker build -f ./docker/Dockerfile_ubuntu_20.04 -t gitlab-test-build ./docker/
+sudo docker build -f ./docker/Dockerfile_ubuntu_20.04 -t gitlab/gitlab-ce:$VERSION-ce.0 --platform linux/arm64 ./docker/
