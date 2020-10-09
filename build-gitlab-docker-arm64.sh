@@ -1,8 +1,9 @@
 #!/bin/bash
+VERSION=13.4.0
 
 # Replace BASE_URL and VERSION when the official arm64 package is available
-BASE_URL=https://gitlab.com/gypsophlia/gitlab-build-arm64/-/raw/master/release/
-VERSION=13.1.2
+BASE_URL=https://packages.gitlab.com/gitlab/gitlab-ce/packages/ubuntu/focal/gitlab-ce_$(VERSION)-ce.0_arm64.deb/download.deb
+
 
 git clone https://gitlab.com/gitlab-org/omnibus-gitlab.git
 cd omnibus-gitlab
